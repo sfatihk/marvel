@@ -6,6 +6,7 @@ import { store } from "./store/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import * as dotenv from "dotenv";
+import "antd/dist/antd.css";
 dotenv.config();
 
 ReactDOM.render(
