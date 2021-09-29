@@ -6,5 +6,5 @@ export type CharacterType = {
   name: string;
   thumbnail: ThumnailType;
   description: string;
-  comics: ComicType[];
+  comics: ComicType;
 };
