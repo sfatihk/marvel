@@ -9,6 +9,9 @@ import {
 } from "../../store/features/characterSlice";
 import Character from "../../components/Character";
 
+//styles
+import "./CharacterList.scss";
+
 const CharacterList = () => {
   const dispatch = useAppDispatch();
   const { status, results, count } = useAppSelector(getCharacterList);
@@ -20,7 +23,7 @@ const CharacterList = () => {
   }, [count, dispatch]);
 
   return (
-    <Row>
+    <div className="characterList">
       {results &&
         results.map((character) => (
           <Character key={character.id} {...character} />
@@ -32,7 +35,7 @@ const CharacterList = () => {
           </button>
         </Col>
       )}
-    </Row>
+    </div>
   );
 };
 
