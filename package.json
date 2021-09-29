@@ -2,12 +2,12 @@
   "name": "marvel",
   "version": "0.1.0",
   "author": {
-    "name" : "Seyyid Fatih KOç",
-    "email" : "info@sfatihk.com",
-    "url" : "http://sfatihk.com"
+    "name": "Seyyid Fatih KOç",
+    "email": "info@sfatihk.com",
+    "url": "http://sfatihk.com"
   },
   "bugs": {
-    "url" : "https://github.com/sfatihk/marvel/issues",
+    "url": "https://github.com/sfatihk/marvel/issues",
     "email": "info@sfatihk.com"
   },
   "license": "MIT",
@@ -17,11 +17,16 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/crypto-js": "^4.0.2",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-redux": "^7.1.7",
+    "apisauce": "^2.1.1",
+    "axios": "^0.21.4",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^10.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.0",
