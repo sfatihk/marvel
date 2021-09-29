@@ -1,31 +1,21 @@
-import React, { useEffect } from "react";
-import {
-  getCharacterList,
-  getCharacters,
-} from "../store/features/characterSlice";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
-
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Layout } from "antd";
 import "./App.css";
 
+//screens
+import HomeScreen from "../screens/home/HomeScreen";
+import CharacterDetailScreen from "../screens/characterDetail/CharacterDetailScreen";
+const { Header, Footer, Content } = Layout;
+
 function App() {
-  const dispatch = useAppDispatch();
-  const { status, results, count } = useAppSelector(getCharacterList);
-
-  useEffect(() => {
-    dispatch(getCharacters(0));
-  }, [dispatch]);
   return (
-    <div className="App">
-      <ol>{results && results.map((c) => <li key={c.id}>{c.name}</li>)}</ol>
-
-      <p>total : {count} </p>
-      {status === "loading" && <h2>LOADING</h2>}
-      {status !== "loading" && (
-        <button onClick={() => dispatch(getCharacters(count))}>
-          Load More
-        </button>
-      )}
-    </div>
+    <>
+      <Router>
+        <Route exact path="/" component={HomeScreen} />
+        <Route path="/characters/:id" component={CharacterDetailScreen} />
+      </Router>
+    </>
   );
 }
 
