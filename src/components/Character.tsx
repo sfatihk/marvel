@@ -2,6 +2,8 @@ import { Col } from "antd";
 import { CharacterType } from "../types/CharacterType";
 import { useHistory } from "react-router-dom";
 
+//styles
+import "./Character.scss";
 const Character = ({
   id,
   name,
@@ -11,20 +13,17 @@ const Character = ({
 }: CharacterType) => {
   const history = useHistory();
   return (
-    <Col
-      xs={{ span: 6, offset: 1 }}
-      lg={{ span: 4, offset: 2 }}
+    <div
       onClick={() => history.push(`/characters/${id}`)}
-      style={{ display: "flex", flexDirection: "column", marginBottom: "20px" }}
+      className="character"
     >
       <img
         src={thumbnail.path + "." + thumbnail.extension}
         alt=""
-        width="100"
-        height="100"
+        className="character__thumbnail"
       />
-      {name}
-    </Col>
+      <div className="character__name">{name}</div>
+    </div>
   );
 };
 
