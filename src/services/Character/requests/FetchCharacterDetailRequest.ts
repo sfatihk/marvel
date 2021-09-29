@@ -23,9 +23,7 @@ const FetchCharacterDetailRequest = async (
 ): Promise<FetchCharacterDetailsResponseType> => {
   const id = payload.id;
 
-  //const authString = generateAuthQueryString();
-  const authString =
-    "ts=1551892957053&apikey=ed0db551a956a22bc791744a20041f60&hash=28c71675f79648ff557cf218a277715f"; //todoo must delete
+  const authString = generateAuthQueryString();
 
   return api
     .get<ResponseType>(`/characters/${id}?${authString}`)
