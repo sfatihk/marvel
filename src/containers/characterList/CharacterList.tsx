@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Col, Row } from "antd";
+import { Col } from "antd";
 
 //store
 import { useAppDispatch, useAppSelector } from "../../store/hooks";

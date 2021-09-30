@@ -1,4 +1,3 @@
-import { Col } from "antd";
 import { CharacterType } from "../types/CharacterType";
 import { useHistory } from "react-router-dom";
 
