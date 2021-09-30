@@ -35,8 +35,9 @@ const CharacterDetailScreen = ({ match }: { match: RouterParam }) => {
         <div className="characterDetail__name">{character?.name}</div>
       </div>
       <div className="characterDetail__content">
-        <h4>Description : {character?.description || "-"}</h4>
-
+        <h4>Description : </h4>
+        <h4>{character?.description || "-"}</h4>
+        <br />
         <h4>Comics : {character?.comics.items.length === 0 && "-"}</h4>
         <ol>
           {character?.comics.items.map((comicbook, i) => (
