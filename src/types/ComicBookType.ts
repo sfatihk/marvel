@@ -1,7 +1,7 @@
 import { ThumnailType } from "./ThumnailType";
 
 type UrlType = {
-  type: string;
+  type: "detail" | "purchase" | "reader" | "inAppLink";
   url: string;
 };
 type DateType = {
