@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comic components renders correctly 1`] = `
+<div
+  className="comic"
+>
+  <img
+    alt=""
+    className="comic__thumbnail"
+    src="xyz.png"
+  />
+  <div
+    className="comic__content"
+  >
+    <div
+      className="comic__title"
+    >
+      Comic Book
+    </div>
+    <div
+      className="comic__pageCount"
+    >
+      Page count : 
+      123
+    </div>
+    <div
+      className="comic__publishDate"
+    >
+      Published :
+       
+      18.03.2020
+    </div>
+    <div
+      className="comic__price"
+    >
+      Price :
+       
+      $321
+    </div>
+    <a
+      className="comic__link"
+      href="https://google.com"
+      rel="noreferrer"
+      target="_blank"
+    >
+      details...
+    </a>
+  </div>
+</div>
+`;
