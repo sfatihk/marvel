@@ -1,7 +1,9 @@
+@import "../assets/style/mixin.scss";
+
 .character {
+  @include characterCoverFrame;
   background-color: #fff;
-  border: solid 2px #000;
-  box-shadow: 0 6px 6px -6px #000;
+
   display: inline-block;
   height: 300px;
   margin: 1vmin;
