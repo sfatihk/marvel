@@ -7,7 +7,7 @@ import {
   getCharacterList,
   getCharacters,
 } from "../../store/features/characterSlice";
-import Character from "../../components/Character";
+import Character from "../../components/character/Character";
 
 //styles
 import "./CharacterList.scss";
