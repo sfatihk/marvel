@@ -16,12 +16,7 @@ const Comic = ({
     dates.find((date) => date.type === "onsaleDate")?.date
   );
   return (
-    <a
-      className="comic"
-      href={urls.find((url) => url.type === "detail")?.url}
-      target="_blank"
-      rel="noreferrer"
-    >
+    <div className="comic">
       <img
         src={thumbnail.path + "." + thumbnail.extension}
         alt=""
@@ -39,8 +34,16 @@ const Comic = ({
           {"$" + prices.find((price) => price.type === "printPrice")?.price ||
             "-"}
         </div>
+        <a
+          className="comic__link"
+          href={urls.find((url) => url.type === "detail")?.url}
+          target="_blank"
+          rel="noreferrer"
+        >
+          details...
+        </a>
       </div>
-    </a>
+    </div>
   );
 };
 
