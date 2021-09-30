@@ -4,9 +4,9 @@ Website using marvel APIs. It lists Marvel's characters & their comics.
 
 ### 👉 [Live Preview](https://marvelbox.netlify.app)
 
-## Spesification
+## Specification
 
-#### System Spesification
+#### System Specification
 
 - Node: 14.17.6
 - npm: 7.22.0
