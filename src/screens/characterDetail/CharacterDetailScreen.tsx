@@ -4,6 +4,8 @@ import * as CharacterService from "../../services/Character/CharacterService";
 import { CharacterType } from "../../types/CharacterType";
 import { ExtendedComicBookType } from "../../types/ComicBookType";
 
+import ComicList from "../../containers/comicList/ComicList";
+
 import "./CharacterDetailScreen.scss";
 type PropType = {
   id: number;
@@ -45,16 +47,7 @@ const CharacterDetailScreen = ({ match }: { match: RouterParam }) => {
         <h4>{character?.description || "-"}</h4>
         <br />
         <h4>Comics : {comics?.length === 0 && "-"}</h4>
-        <ol>
-          {comics?.map((comicbook, i) => (
-            <li key={i}>
-              {comicbook.title +
-                " " +
-                comicbook.dates.find((date) => date.type === "onsaleDate")
-                  ?.date}
-            </li>
-          ))}
-        </ol>
+        {comics && <ComicList comics={comics} />}
       </div>
     </div>
   );
