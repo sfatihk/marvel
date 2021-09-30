@@ -9,16 +9,13 @@ type PropType = {
 type RouterParam = {
   params: PropType;
 };
-type RouterProps = {
-  match: RouterParam;
-};
 const CharacterDetailScreen = ({ match }: { match: RouterParam }) => {
   const [character, setCharacter] = useState<CharacterType>();
   useEffect(() => {
     CharacterService.fetchCharacterDetails({ id: match.params.id }).then((r) =>
       setCharacter(r.results[0])
     );
-  }, []);
+  }, [match.params.id]);
 
   return WithLayout(
     <>

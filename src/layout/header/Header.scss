@@ -1,0 +1,12 @@
+@import "../../assets/style/colors.scss";
+
+.header {
+  background-color: $color1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  cursor: pointer;
+}
