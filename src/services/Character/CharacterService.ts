@@ -6,10 +6,17 @@ import fetchCharacterDetailsRequest, {
   FetchCharacterDetailsPayloadType,
 } from "./requests/FetchCharacterDetailRequest";
 
+import FetchCharacterComicsRequest, {
+  FetchCharacterComicsPayloadType,
+} from "./requests/FetchCharacterComicsRequest";
+
 const fetchCharacters = (props: FetchCharactersPayloadType) =>
   FetchCharactersRequest(props);
 
 const fetchCharacterDetails = (props: FetchCharacterDetailsPayloadType) =>
   fetchCharacterDetailsRequest(props);
 
-export { fetchCharacters, fetchCharacterDetails };
+const fetchCharacterComics = (props: FetchCharacterComicsPayloadType) =>
+  FetchCharacterComicsRequest(props);
+
+export { fetchCharacters, fetchCharacterDetails, fetchCharacterComics };

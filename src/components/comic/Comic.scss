@@ -1,0 +1,81 @@
+@import "../../assets/style/mixin.scss";
+@import "../../assets/style/colors.scss";
+
+.comic {
+  margin: 1vmin;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 30px;
+    height: auto;
+  }
+}
+.comic:hover {
+  background-color: $color7;
+  border-radius: 10px;
+}
+
+.comic img {
+  transform-origin: 100 100;
+  transition: transform 0.5s ease;
+  flex-shrink: 0;
+  min-height: 100%;
+
+  max-height: 100%;
+  @include characterCoverFrame;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    max-height: unset;
+    max-width: 100%;
+  }
+}
+
+.comic__content {
+  flex: 1;
+  padding-left: 10px;
+  @media (max-width: 768px) {
+    padding-left: 0;
+  }
+}
+
+.comic__title {
+  text-decoration: none;
+  color: $color1;
+  font-size: 24px;
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
+}
+
+.comic__pageCount {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: $color6;
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.comic__publishDate {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: $color6;
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.comic__price {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: $color6;
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+}

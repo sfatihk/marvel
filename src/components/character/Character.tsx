@@ -1,4 +1,4 @@
-import { CharacterType } from "../types/CharacterType";
+import { CharacterType } from "../../types/CharacterType";
 import { useHistory } from "react-router-dom";
 
 //styles
