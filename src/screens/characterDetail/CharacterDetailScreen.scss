@@ -30,6 +30,10 @@
 .characterDetail__cover {
   @include characterCoverFrame;
   max-width: 300px;
+
+  @media (max-width: 300px) {
+    max-width: 100%;
+  }
 }
 .characterDetail__content {
   max-width: 1200px;
@@ -40,6 +44,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+
+  @media (max-width: 1200px) {
+    width: calc(100% - 20px);
+  }
 
   font-size: 20px;
   letter-spacing: 2px;
