@@ -11,6 +11,7 @@ import Character from "../../components/Character";
 
 //styles
 import "./CharacterList.scss";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const CharacterList = () => {
   const dispatch = useAppDispatch();
@@ -23,11 +24,18 @@ const CharacterList = () => {
   }, [count, dispatch]);
 
   return (
-    <div className="characterList">
+    <InfiniteScroll
+      className="characterList"
+      dataLength={count}
+      next={() => dispatch(getCharacters(count))}
+      hasMore={true}
+      loader={<h4>Loading...</h4>}
+    >
       {results &&
         results.map((character) => (
           <Character key={character.id} {...character} />
         ))}
+
       {status !== "loading" && (
         <Col xs={{ span: 23, offset: 1 }} lg={{ span: 22, offset: 2 }}>
           <button onClick={() => dispatch(getCharacters(count))}>
@@ -35,7 +43,7 @@ const CharacterList = () => {
           </button>
         </Col>
       )}
-    </div>
+    </InfiniteScroll>
   );
 };
 
