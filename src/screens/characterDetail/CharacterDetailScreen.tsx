@@ -9,7 +9,6 @@ type PropType = {
 type RouterParam = {
   params: PropType;
 };
-
 const CharacterDetailScreen = ({ match }: { match: RouterParam }) => {
   const [character, setCharacter] = useState<CharacterType>();
   useEffect(() => {
